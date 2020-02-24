@@ -23,7 +23,9 @@ export default class Starts extends React.Component {
 
     componentDidMount(){
         let pid = this.state.pid;
-        fetch(`https://strikezone-api.herokuapp.com/starts/${pid}`,{
+        var proxyUrl = 'https://lit-citadel-87801.herokuapp.com/';
+        var targetUrl = `https://strikezone-api.herokuapp.com/starts/${pid}`;
+        fetch(`${proxyUrl + targetUrl}`,{
             method: 'GET',
             headers: {
                 Accept: 'application/json',
