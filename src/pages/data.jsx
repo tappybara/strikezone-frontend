@@ -41,8 +41,9 @@ export default class Data extends React.Component {
         var pid = this.props.pid;
         var start = this.props.start;
         var pteam = this.props.pteam;
- 
-        fetch(`https://strikezone-api.herokuapp.com/graphs/${pid}/${start.date + ' 2019'}/${pteam}/${start.opp}`,{
+        var proxyUrl = 'https://lit-citadel-87801.herokuapp.com/';
+        var targetUrl = `https://strikezone-api.herokuapp.com/graphs/${pid}/${start.date + ' 2019'}/${pteam}/${start.opp}`;
+        fetch(`${proxyUrl + targetUrl}`,{
             method: 'GET',
             headers: {
                 Accept: 'application/json',
