@@ -1,0 +1,298 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(../images/cubes.png);
+    background-repeat: repeat;
+}
+
+.pitchers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(../images/cubes.png);
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
+    padding-top: 15px;
+    position:fixed
+}
+
+.pitchers-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+.home-division {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 75%;
+    
+}
+
+table {
+    margin: auto;
+}
+
+.division, .pitchers-cols {
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.navBar {
+    display:flex;
+    height: 70px;
+    width: match-parent;
+    box-shadow: 5px 1px 40px -15px rgb(5, 9, 12);
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    background-color: black;
+    margin: 0;
+}
+
+.navBarItemLeft {
+    flex-grow: 1;
+    font-size: 20px;
+    color: white;
+    float:left;
+    text-decoration: none;
+    font-family: 'Lobster', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-left: 20px;
+}
+
+.navBarItemRight {
+    flex-grow: 1;
+    font-size: 20px;
+    color: white;
+    float:left;
+    text-decoration: none;
+    color: transparent;
+}
+
+.navBarTitle {
+    flex-grow: 4;
+    color: white;
+    font-size: 30px;
+    font-family: 'Lobster', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.division-head, .pitchers-head{
+    text-align: center;
+    font-family: 'Patua One';
+    font-size: 27px;
+}
+
+.card {
+    width: 250px;
+    height: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    padding:5px;
+    align-items: center;
+}
+
+.card-image {
+    border: 1px solid red;
+    flex-grow: 1;
+    object-fit: contain;
+    max-width: 40px;
+    margin-right: 5px;
+}
+
+.card-name {
+    flex-grow: 3;
+    margin:0;
+    text-align: center;
+    height: fit-content;
+}
+
+.start{
+    background-image: url(../images/cubes.png);
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 15px;
+    position:fixed
+}
+
+.start-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 85%;
+    height: 90%;
+}
+
+.start-block{
+    min-height: 0px;
+    overflow-y: auto;
+    width: 165px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.team-card {
+    text-align: justify;
+    height: 77px;
+    width: 275px;
+    color: white;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 13px;
+    border-style: double;
+    border-width: 8px;
+
+}
+
+.team-card:hover{
+    border-style: solid;
+}
+
+.team-card:hover *{
+    opacity: 1;
+}
+
+.start-button{
+    background-color: white;
+    border: solid 1px black;
+    width: max-content;
+    height: max-content;
+}
+
+.date-card{
+    text-align: justify;
+    height: 90px;
+    width: 125px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 13px;
+    border-style: double;
+    border-width: 8px;
+    padding: 5px;
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: white;
+    font-family: "Patua One";
+}
+
+.date-card-selected{
+    text-align: justify;
+    height: 90px;
+    width: 125px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 13px;
+    border-style: solid;
+    border-width: 8px;
+    padding: 5px;
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: white;
+    font-family: "Patua One";
+}
+
+.date-card-selected:focus, .date-card:active{
+    outline: none;
+}
+
+
+.date-card-opp{
+    width: 100px;
+    flex-grow: 4;
+    text-align: center;
+    font-size: 20px;
+}
+
+.date-card-date, .date-card-result{
+    width: 100px;
+    flex-grow: 1;
+    text-align: left;
+    font-size: 12px;
+}
+
+.date-card-result {
+    text-align: right;
+}
+
+.card-name {
+    position: absolute;
+    text-align: center;
+    line-height: 60px;
+    width: 100%;
+    height: 62px;
+    font-family: "Patua One";
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    paint-order: stroke fill;
+    z-index: 1;
+}
+
+.team-card-name{
+    position: absolute;
+    text-align: center;
+    line-height: 60px;
+    width: 100%;
+    height: 62px;
+    font-family: "Patua One";
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-size: 25px;
+    paint-order: stroke fill;
+    z-index: 1;
+    letter-spacing: 2px;
+}
+
+.team-card-span {
+    height: 100%;
+    transform: scale(1, 2);
+    -webkit-transform: scale(1, 2); /* Safari and Chrome */
+    -moz-transform: scale(1, 2); /* Firefox */
+    -ms-transform: scale(1, 2); /* IE 9+ */
+    -o-transform: scale(1, 2); 
+    font-size: 25px;
+    font-weight: 400;
+    opacity: 0.15;
+    font-family: "Arvo";
+}
+
+.team-card-city{
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid white;
+    width: 100%;
+    line-height: 60px;
+    padding-right: 5px;
+    padding-left: 5px;
+    z-index: 0;
+}
+
+.team-card-name:hover + .team-card-city *{
+    -webkit-text-fill-color: white;
+}
+
+.data-box {
+    width: 800px; 
+    height: 650px; 
+    text-align: center;
+    line-height: 300px;
+    padding-top: 10px;
+    font-family: "Patua One";
+}
+
