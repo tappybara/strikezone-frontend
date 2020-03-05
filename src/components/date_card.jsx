@@ -15,7 +15,6 @@ export default class DateCard extends React.Component {
     render() {
         let colorDict = this.state.colourDict;
         let colours = colorDict[this.props.pteam];
-        console.log(this.props.pteam);
         let result = this.props.start.result[0];
         let resultColour = result === 'W' ? 'green' : 'red';
         let selected = this.props.active;

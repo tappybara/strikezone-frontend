@@ -24,14 +24,11 @@ export default class Data extends React.Component {
     }
 
     componentDidMount(){
-        ///graphs/<pid>/<date>/<player_team>/<opp_team>
-        console.log("first mount");
         this.fetchPitchData();
     }
 
     componentDidUpdate(prevProps, prevState) {
         if(prevProps.start !== this.props.start){
-            console.log("Update Component");
             this.fetchPitchData();
         }
     }
@@ -62,7 +59,7 @@ export default class Data extends React.Component {
             }, this.initPitchGlossary)
 
         }).catch((err) => {
-            console.log(err);
+
         });
     }
 
@@ -254,7 +251,6 @@ export default class Data extends React.Component {
     }
 
     render() {
-        console.log(this.state);
         return (
             this.state.data ?
             <Plot

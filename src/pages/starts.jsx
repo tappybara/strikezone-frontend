@@ -38,7 +38,7 @@ export default class Starts extends React.Component {
                 return {dates: data};
             })
         }).catch((err) => {
-            console.log(err);
+            
         });
         
     }

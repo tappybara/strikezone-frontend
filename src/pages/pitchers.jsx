@@ -21,12 +21,10 @@ class PitchersBase extends React.Component {
 
     componentDidMount() {
         this.getPitchers();
-        console.log(this.props.location.state)
     }
 
     getPitchers() {
         var team = this.props.match.params.tn;
-        console.log(team);
         this.props.firebase.pitchers(team).on('value', snapshot => {
             const object = snapshot.val();
 
@@ -34,19 +32,16 @@ class PitchersBase extends React.Component {
                 const pitcherList = Object.keys(object).map(key => ({
                     ...object[key]
                 }));
-                console.log(pitcherList)
 
                 const st = pitcherList.filter(player => player.type === "starter");
                 const bp = pitcherList.filter(player => player.type === "bullpen");
                 const cl = pitcherList.filter(player => player.type === "closer");
-                console.log(st)
                 this.setState(
                     {
                     starters: st,
                     bullpen: bp,
                     closers: cl,
-                    },
-                    () => console.log(this.state)
+                    }
                 );
                     
             }
