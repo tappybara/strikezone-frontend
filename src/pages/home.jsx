@@ -18,7 +18,20 @@ export default class Home extends React.Component {
     }
 
     componentDidMount() {
-        
+        // wakeup heroku server to reduce initial load time from sleep state
+        var proxyUrl = 'https://lit-citadel-87801.herokuapp.com/';
+        var targetUrl = `https://strikezone-api.herokuapp.com/wakeup`;
+        fetch(`${proxyUrl + targetUrl}`,{
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+              },
+          }).
+        then((reply) => {
+            
+        }).catch((err) => {
+            
+        });
     }
 
 
